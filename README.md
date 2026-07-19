@@ -10,10 +10,10 @@ clubs, memberships, applications, user accounts, or school administration.
 
 ## Status
 
-Planning and contract preparation. Live integration is blocked until the reference
-site's public summary endpoint has configurable school identity, a stable response
-contract, privacy tests, and a production URL. Frontend work may proceed against
-versioned fixtures.
+Planning and contract preparation. The reference backend already provides a public,
+configurable `GET /api/summary`, but live integration remains blocked on contract
+versioning, public-only filtering, UTC timestamp semantics, summary-specific tests, and
+a verified production URL. Frontend work may proceed against versioned fixtures.
 
 ## MVP
 
@@ -36,6 +36,7 @@ a server for an application that only performs scheduled collection and public r
 ## Documentation
 
 - [Development plan](docs/DEVELOPMENT_PLAN.md)
+- [1st repo backend audit](docs/FIRST_REPO_BACKEND_AUDIT.md)
 - [Deployment guide](docs/DEPLOYMENT.md)
 
 ## Project Rules
