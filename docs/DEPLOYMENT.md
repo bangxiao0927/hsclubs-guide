@@ -132,8 +132,8 @@ npm run test:security
 npx wrangler deploy --dry-run
 ```
 
-Security tests must cover blocked IP ranges, DNS/redirect validation, timeout, response
-size, malformed schemas, and public-field allowlisting.
+Security tests must cover exact-host allowlisting, IP-literal rejection, redirect
+rejection, timeout, response size, malformed schemas, and public-field allowlisting.
 
 ## 6. Frontend Deployment to Cloudflare Pages
 
@@ -221,8 +221,8 @@ Do not accept an arbitrary URL directly into the collector. A maintainer should:
 
 1. Verify control of the school site through an official school contact or a temporary
    verification token at the source site.
-2. Confirm the endpoint is HTTPS and uses the approved summary schema version.
-3. Confirm identity, canonical URL, timestamp, and hash behavior.
+2. Confirm the exact HTTPS endpoint is `GET /api/summary` and returns source contract v1.
+3. Confirm configured identity, canonical URL, UTC timestamps, and hash behavior.
 4. Run privacy and schema validation without publishing the record.
 5. Add the hostname and exact summary path to the collector allowlist.
 6. Run the first collection and review the normalized public output.
@@ -234,7 +234,7 @@ the aggregator handles independent deployments correctly.
 
 ## 9. Production Release Checklist
 
-- Source API readiness gate passes.
+- Source contract v1 readiness gate and the 1st repo summary test suite pass.
 - At least two verified schools pass collection and privacy validation.
 - Frontend and service CI are green on the release commits.
 - Production domains, HTTPS, CORS, caching, and security headers are verified.
