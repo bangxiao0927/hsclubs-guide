@@ -209,3 +209,22 @@ h1 {
   font-weight: 800;
   text-underline-offset: 0.25rem;
 }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  color: var(--muted);
+  background: #edf0ea;
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  padding-block: 2rem;
+  font-size: 0.83rem;
+}
+
+.footer-inner p {
+  max-width: 28rem;
+  margin-bottom: 0;
+}
