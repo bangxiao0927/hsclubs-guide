@@ -187,3 +187,25 @@ h1 {
   color: var(--muted);
   line-height: 1.65;
 }
+
+.route-message {
+  max-width: 45rem;
+}
+
+.route-message h1 {
+  font-size: clamp(2.5rem, 7vw, 4.8rem);
+}
+
+.route-message > p:not(.eyebrow) {
+  color: var(--muted);
+  font-size: 1.1rem;
+  line-height: 1.7;
+}
+
+.text-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: var(--brand);
+  font-weight: 800;
+  text-underline-offset: 0.25rem;
+}
