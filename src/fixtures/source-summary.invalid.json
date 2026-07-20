@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "2.0",
+  "schoolName": "Unsafe School",
+  "shortName": "US",
+  "slug": "Unsafe School",
+  "canonicalUrl": "http://127.0.0.1/admin",
+  "status": "active",
+  "clubCount": -1,
+  "categories": {
+    "Private": 5
+  },
+  "lastUpdatedAt": "2026-07-19 20:15:30",
+  "generatedAt": "not-a-date",
+  "dataHash": "not-a-hash",
+  "ownerEmail": "private@example.org"
+}
