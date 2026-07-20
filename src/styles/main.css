@@ -228,3 +228,19 @@ h1 {
   max-width: 28rem;
   margin-bottom: 0;
 }
+
+@media (max-width: 42rem) {
+  .header-tagline {
+    display: none;
+  }
+
+  .foundation-card {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+}
