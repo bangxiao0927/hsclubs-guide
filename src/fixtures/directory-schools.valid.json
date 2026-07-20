@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-07-19T20:25:00Z",
+  "schools": [
+    {
+      "slug": "mountain-view",
+      "name": "Mountain View High School",
+      "shortName": "MVHS",
+      "canonicalUrl": "https://clubs.mountain-view.example",
+      "location": {
+        "city": "Mountain View",
+        "region": "CA",
+        "country": "US"
+      },
+      "verificationStatus": "verified",
+      "availability": "fresh",
+      "clubCount": 42,
+      "categories": {
+        "Academic": 12,
+        "Arts": 8,
+        "Community": 7
+      },
+      "sourceUpdatedAt": "2026-07-19T20:15:30Z",
+      "lastSuccessfulCollectionAt": "2026-07-19T20:20:00Z"
+    },
+    {
+      "slug": "lakeside-secondary",
+      "name": "Lakeside Secondary School",
+      "shortName": "LSS",
+      "canonicalUrl": "https://clubs.lakeside.example",
+      "location": {
+        "city": "Lakeside",
+        "region": "BC",
+        "country": "CA"
+      },
+      "verificationStatus": "verified",
+      "availability": "stale",
+      "clubCount": 18,
+      "categories": {
+        "Culture": 6,
+        "Sports": 5
+      },
+      "sourceUpdatedAt": "2026-07-10T11:00:00Z",
+      "lastSuccessfulCollectionAt": "2026-07-10T11:05:00Z"
+    }
+  ]
+}
