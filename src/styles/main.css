@@ -53,3 +53,21 @@ a {
   outline: 3px solid #9a5a00;
   outline-offset: 3px;
 }
+
+.app-frame {
+  display: grid;
+  min-height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+
+.site-header {
+  border-bottom: 1px solid rgb(40 75 62 / 12%);
+  background: rgb(246 248 244 / 92%);
+}
+
+.header-inner,
+.footer-inner,
+.page-shell {
+  width: min(100% - 2rem, var(--page-width));
+  margin-inline: auto;
+}
