@@ -24,3 +24,32 @@
   --radius-lg: 1.5rem;
   --page-width: 72rem;
 }
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-width: 20rem;
+  background: #f6f8f4;
+}
+
+body {
+  min-width: 20rem;
+  min-height: 100vh;
+  margin: 0;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+:focus-visible {
+  outline: 3px solid #9a5a00;
+  outline-offset: 3px;
+}
