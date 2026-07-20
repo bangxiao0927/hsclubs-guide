@@ -71,3 +71,36 @@ a {
   width: min(100% - 2rem, var(--page-width));
   margin-inline: auto;
 }
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 5rem;
+  gap: 1rem;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: var(--brand);
+  font-size: 1.05rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.brand-mark {
+  display: grid;
+  width: 2.35rem;
+  height: 2.35rem;
+  place-items: center;
+  border-radius: 0.7rem 0.7rem 0.7rem 0.2rem;
+  color: white;
+  background: var(--brand);
+}
+
+.header-tagline {
+  color: var(--muted);
+  font-size: 0.88rem;
+}
