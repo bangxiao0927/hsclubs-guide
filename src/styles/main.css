@@ -104,3 +104,23 @@ a {
   color: var(--muted);
   font-size: 0.88rem;
 }
+
+.skip-link {
+  position: fixed;
+  z-index: 10;
+  top: 0.75rem;
+  left: 0.75rem;
+  padding: 0.75rem 1rem;
+  transform: translateY(-150%);
+  border-radius: var(--radius-sm);
+  color: white;
+  background: var(--brand);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.page-shell {
+  padding-block: clamp(3.5rem, 9vw, 7.5rem);
+}
