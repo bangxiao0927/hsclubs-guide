@@ -10,10 +10,11 @@ clubs, memberships, applications, user accounts, or school administration.
 
 ## Status
 
-Planning and contract preparation. The reference backend already provides a public,
-configurable `GET /api/summary`, but live integration remains blocked on contract
-versioning, public-only filtering, UTC timestamp semantics, summary-specific tests, and
-a verified production URL. Frontend work may proceed against versioned fixtures.
+Frontend foundation development is underway against versioned fixtures. The Vue
+application, strict runtime contracts, default MSW data source, test tooling, and CI are
+available. Live integration remains blocked on source contract versioning, public-only
+filtering, UTC timestamp semantics, summary-specific tests, and a verified production
+URL.
 
 ## MVP
 
@@ -33,9 +34,31 @@ a verified production URL. Frontend work may proceed against versioned fixtures.
 The TypeScript-only stack keeps the small team workflow simple and avoids maintaining
 a server for an application that only performs scheduled collection and public reads.
 
+## Local Development
+
+Node.js 22 or newer is required. Local development uses MSW contract fixtures by
+default, so no live API or credentials are needed.
+
+```bash
+npm ci
+cp .env.example .env.local
+npm run dev
+```
+
+Run all validation steps with:
+
+```bash
+npm run lint:check
+npm run type-check
+npm run test:unit -- --run
+npm run test:e2e
+npm run build
+```
+
 ## Documentation
 
 - [Development plan](docs/DEVELOPMENT_PLAN.md)
+- [Frontend foundation](docs/FRONTEND_FOUNDATION.md)
 - [1st repo backend audit](docs/FIRST_REPO_BACKEND_AUDIT.md)
 - [Deployment guide](docs/DEPLOYMENT.md)
 
