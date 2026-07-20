@@ -1,0 +1,18 @@
+{
+  "schemaVersion": "1.0",
+  "schoolName": "Mountain View High School",
+  "shortName": "MVHS",
+  "slug": "mountain-view",
+  "canonicalUrl": "https://clubs.mountain-view.example",
+  "status": "active",
+  "clubCount": 42,
+  "categories": {
+    "Academic": 12,
+    "Arts": 8,
+    "Community": 7
+  },
+  "memberCount": 350,
+  "lastUpdatedAt": "2026-07-19T20:15:30Z",
+  "generatedAt": "2026-07-19T20:20:00Z",
+  "dataHash": "2c26b46b68ffc68ff99b453c1d30413413422d706483bfa0f98a5e886266e7ae"
+}
