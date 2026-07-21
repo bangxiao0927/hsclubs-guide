@@ -17,6 +17,7 @@ final class DiscoveryFlowUITests: XCTestCase {
         let card = app.buttons["school-card-mountain-view"]
         XCTAssertTrue(card.waitForExistence(timeout: 2))
         card.tap()
-        XCTAssertTrue(app.links["open-school-site"].waitForExistence(timeout: 2))
+        let outboundLink = app.descendants(matching: .any)["open-school-site"]
+        XCTAssertTrue(outboundLink.waitForExistence(timeout: 2))
     }
 }
