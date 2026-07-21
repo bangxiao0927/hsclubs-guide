@@ -7,3 +7,8 @@
 - Keep collector code and secrets in a separate private repository.
 - Keep all documentation and user-facing copy in English.
 - After completing requested changes, automatically commit and push them unless the user says otherwise.
+
+## Product Direction Update
+
+- The intended client product is a native iOS app, not a responsive web application.
+- Before restructuring this repository, confirm whether the iOS app replaces the existing Vue frontend or belongs in a separate repository.
