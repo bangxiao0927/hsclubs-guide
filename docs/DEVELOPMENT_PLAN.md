@@ -126,13 +126,13 @@ collector.
 
 ### Public `hsclubs-guide` Repository
 
-- Vue 3 Composition API, Vite, and TypeScript.
-- Vue Router for list and school detail routes.
-- Zod for runtime public API validation.
-- Composables first; Pinia only if cross-route state requires it.
-- Vitest, Vue Test Utils, MSW, and Playwright.
-- Plain CSS with custom properties.
-- Cloudflare Pages deployment.
+- Swift 6, SwiftUI, and the native iOS application lifecycle.
+- `NavigationStack` for school discovery and detail navigation.
+- Strict Foundation JSON decoding with explicit public-field allowlists.
+- Bundled contract fixtures until the source readiness gate passes.
+- XCTest unit and UI tests on iPhone Simulator.
+- XcodeGen with a committed generated Xcode project.
+- TestFlight and App Store distribution after pilot readiness.
 
 ### Private `hsclubs-guide-service` Repository
 
@@ -143,7 +143,7 @@ collector.
 - Cloudflare Access or CLI-only registry mutation for the MVP.
 
 Do not place the verified ownership contacts, operational errors, mutation endpoints,
-or collector secrets in the public frontend repository.
+or collector secrets in the public iOS repository.
 
 ## 7. Private Service Data Model
 
@@ -198,33 +198,33 @@ Exit gate:
 - Production cannot silently publish generic identity.
 - The 1st repo test suite and new summary tests pass.
 
-### Track B - Public Frontend Foundation
+### Track B - Native iOS Foundation
 
 This track can start immediately with fixtures:
 
-1. Initialize Vue, Vite, TypeScript, Router, linting, and formatting at repo root.
-2. Add Zod source/public schemas plus valid and invalid contract fixtures.
-3. Configure MSW as the default local data source.
-4. Build the application shell, design tokens, and route-level errors.
-5. Add CI for lint, type-check, unit tests, Playwright smoke tests, and build.
+1. Initialize a Swift 6 SwiftUI iPhone application and XcodeGen project at repo root.
+2. Add strict source/public decoders plus valid and invalid contract fixtures.
+3. Configure bundled fixtures as the default and only pre-readiness data source.
+4. Build native navigation, loading, empty, and error states.
+5. Add CI for project generation, Simulator builds, unit tests, and UI tests.
 
 Exit gate:
 
-- A new maintainer can run and test the frontend without any live endpoint.
+- A new maintainer can run and test the iOS app without any live endpoint.
 - CI proves valid fixtures parse and invalid/private fields are not displayed.
 
 ### Track C - Fixture-Driven Discovery MVP
 
-1. Build school list, school card, and `/schools/:slug` detail view.
+1. Build the school list, school card, and native school detail view.
 2. Search normalized full name, short name, and location.
 3. Display verified, fresh, stale, unavailable, and suspended states.
 4. Add loading, empty, partial-failure, and malformed-response states.
 5. Make the registry canonical URL the primary outbound action.
-6. Complete 320 px mobile, keyboard, focus, label, and contrast checks.
+6. Complete 320-point, Dynamic Type, VoiceOver, reduced-motion, and contrast checks.
 
 Exit gate:
 
-- Search-to-school navigation passes Playwright at phone and desktop sizes.
+- Search-to-school navigation passes XCTest UI tests on an iPhone Simulator.
 - No UI feature depends on a direct request to a 1st repo instance.
 
 ### Track D - Private Collector and Public Directory API
@@ -249,13 +249,13 @@ Exit gate:
 
 ### Track E - Integration, Pilot, and Release
 
-1. Connect staging frontend to the staging directory API.
-2. Keep fixtures and MSW for local and CI use.
+1. Connect a TestFlight staging build to the staging directory API.
+2. Keep bundled fixtures for local and CI use.
 3. Onboard the audited reference instance through the verification process.
 4. Onboard a second independently deployed instance before declaring readiness.
 5. Simulate timeout, malformed v1, identity mismatch, and source outage.
 6. Pilot school discovery with students and one registry maintainer.
-7. Complete CSP, dependency/secret scanning, accessibility, and performance checks.
+7. Complete privacy, dependency/secret scanning, accessibility, and performance checks.
 8. Document correction, suspension, deletion, rollback, and incident procedures.
 
 Exit gate:
@@ -271,8 +271,8 @@ Exit gate:
 | 1 | 1st repo | Approve `/api/summary` v1 schema and semantics | Live collection |
 | 2 | 1st repo | Public-only query and validated site configuration | Live collection |
 | 3 | 1st repo | Summary contract, privacy, and anonymous-access tests | Live collection |
-| 4 | Guide | Initialize Vue frontend, schemas, fixtures, and CI | Discovery UI |
-| 5 | Guide | Build school list, search, cards, and detail route | Pilot UI |
+| 4 | Guide | Initialize SwiftUI app, strict decoders, fixtures, and CI | Discovery UI |
+| 5 | Guide | Build native school list, search, cards, and detail flow | Pilot UI |
 | 6 | Guide | Add all freshness/failure states and accessibility tests | Pilot UI |
 | 7 | Private service | Create registry/D1 migrations and protected operations | Collection |
 | 8 | Private service | Implement strict v1 fetch, validation, and storage | Collection |
@@ -302,13 +302,13 @@ Exit gate:
 - Last-known-good retention after every failure class.
 - Public allowlist and private error redaction.
 
-### Frontend
+### iOS App
 
 - Contract parsing and defensive fallback.
 - Case/whitespace-tolerant search and filters.
 - Fresh, stale, unavailable, suspended, empty, and partial-failure rendering.
 - Safe canonical outbound links.
-- Mobile and desktop browser flow plus keyboard accessibility.
+- iPhone Simulator flow, Dynamic Type, VoiceOver, and native focus behavior.
 
 ## 11. Definition of Done
 
@@ -317,7 +317,7 @@ Every issue requires:
 - Acceptance criteria written before implementation.
 - Automated coverage for behavior and risky failure modes.
 - CI passing in the affected repository.
-- Manual mobile/accessibility smoke checks for visible UI changes.
+- Manual iPhone and accessibility smoke checks for visible UI changes.
 - Contract and deployment docs updated with behavior changes.
 - No secrets or private operational data in this public repository.
 - No duplication of school-owned club or user workflows.
@@ -329,9 +329,9 @@ developer and access to a 1st repo maintainer.
 
 | Week | 1st repo | Guide/service |
 |---|---|---|
-| 1 | Approve v1, filtering, configuration | Initialize frontend, schemas, fixtures, CI |
-| 2 | Implement and test v1 | Build list, cards, search, and detail route |
-| 3 | Deploy verified reference endpoint | Finish UI states, mobile, and accessibility |
+| 1 | Approve v1, filtering, configuration | Initialize iOS app, decoders, fixtures, CI |
+| 2 | Implement and test v1 | Build list, cards, search, and native detail flow |
+| 3 | Deploy verified reference endpoint | Finish UI states and iOS accessibility |
 | 4 | Support integration fixes | Build D1 registry, strict collector, and public API |
 | 5 | Verify source behavior | Integrate staging and onboard second school |
 | 6 | Close documentation gaps | Pilot, harden, release, monitor, and test rollback |

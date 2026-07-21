@@ -1,71 +1,68 @@
-# HSclubs Guide
+# HSclubs Guide for iOS
 
-HSclubs Guide is the planned public school-discovery frontend for independent,
-single-school HSclubs sites. Students use it to find a verified school and then open
-that school's own club directory.
+HSclubs Guide is a native iPhone app for discovering verified, independent school-owned
+HSclubs sites. Students search for their school, review public aggregate information,
+and open the school's canonical club directory.
 
-This project corresponds to the optional **2nd repo** in the
-[HSclubs reference plan](https://github.com/bangxiao0927/HSclubs). It does not own
-clubs, memberships, applications, user accounts, or school administration.
+The app does not own clubs, memberships, applications, user accounts, or school
+administration.
 
 ## Status
 
-Frontend foundation development is underway against versioned fixtures. The Vue
-application, strict runtime contracts, default MSW data source, test tooling, and CI are
-available. Live integration remains blocked on source contract versioning, public-only
-filtering, UTC timestamp semantics, summary-specific tests, and a verified production
-URL.
+The native SwiftUI foundation and fixture-driven discovery flow are implemented. Live
+integration remains blocked on the source summary readiness gate in
+`docs/DEVELOPMENT_PLAN.md`. Until that gate passes, the app loads bundled contract
+fixtures and makes no request to an individual school instance.
 
-## MVP
+## Requirements
 
-- Search verified schools by name, abbreviation, and location.
-- Show school identity, availability, freshness, club count, and category counts.
-- Open the canonical club site owned by each school.
-- Remain usable when one source site is unavailable.
-- Work accessibly on phone and desktop.
+- macOS with Xcode 16 or newer.
+- iOS 17 or newer for the app target.
+- XcodeGen 2.46 or newer when changing `project.yml`.
 
-## Technology
+## Run the App
 
-- Public frontend: Vue 3, Vite, TypeScript, Vue Router, Vitest, and Playwright.
-- Private collector/API: TypeScript, Hono, Cloudflare Workers, D1, and Cron Triggers.
-- Hosting: Cloudflare Pages for this repository; Cloudflare Workers/D1 from a separate
-  private repository for collection and the sanitized public API.
+1. Accept the local Xcode license and select the full Xcode installation if needed.
+2. Open `HSclubsGuide.xcodeproj`.
+3. Select the `HSclubsGuide` scheme and an iPhone Simulator.
+4. Run with `Command-R`.
 
-The TypeScript-only stack keeps the small team workflow simple and avoids maintaining
-a server for an application that only performs scheduled collection and public reads.
-
-## Local Development
-
-Node.js 22 or newer is required. Local development uses MSW contract fixtures by
-default, so no live API or credentials are needed.
+Command-line build and tests:
 
 ```bash
-npm ci
-cp .env.example .env.local
-npm run dev
+DEVELOPER_DIR=/Applications/Xcode.app/Contents/Developer \
+  xcodebuild test \
+  -project HSclubsGuide.xcodeproj \
+  -scheme HSclubsGuide \
+  -destination 'platform=iOS Simulator,name=iPhone 16,OS=latest' \
+  CODE_SIGNING_ALLOWED=NO
 ```
 
-Run all validation steps with:
+Regenerate the committed project after changing `project.yml`:
 
 ```bash
-npm run lint:check
-npm run type-check
-npm run test:unit -- --run
-npm run test:e2e
-npm run build
+xcodegen generate
 ```
+
+## Architecture
+
+- Swift 6 and SwiftUI application lifecycle.
+- `NavigationStack` discovery and school detail flow.
+- Strict Foundation-based JSON contract validation.
+- Bundled fixtures as the default and only data source until API readiness.
+- XCTest unit and UI coverage.
+- XcodeGen for deterministic project generation.
 
 ## Documentation
 
 - [Development plan](docs/DEVELOPMENT_PLAN.md)
-- [Frontend foundation](docs/FRONTEND_FOUNDATION.md)
+- [iOS foundation](docs/IOS_FOUNDATION.md)
 - [1st repo backend audit](docs/FIRST_REPO_BACKEND_AUDIT.md)
-- [Deployment guide](docs/DEPLOYMENT.md)
+- [Distribution guide](docs/DEPLOYMENT.md)
 
 ## Project Rules
 
-- School sites stay independent and own all club and user data.
-- Only manually verified HTTPS endpoints may be collected.
+- School sites remain independent and own all club and user data.
 - Never collect or expose student, member, president, or administrator identity data.
 - Keep private collector code, credentials, and operational metadata out of this public
   repository.

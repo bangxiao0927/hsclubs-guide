@@ -1,0 +1,634 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		013416B3E5F87645FDDBCF2D /* DiscoveryFlowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419FB810E052392ED8BB3021 /* DiscoveryFlowUITests.swift */; };
+		1E898AD8EFD7EEDD0C9A0AC7 /* source-summary.valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DA32C380EC748EF38C74A15 /* source-summary.valid.json */; };
+		1EC032C0046E35B91EEED333 /* source-summary.invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C126ACB7EE503D25BE164 /* source-summary.invalid.json */; };
+		3280D7EEC33F3ACA368EF6CE /* SchoolDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C318DF82168BE6B09079365C /* SchoolDetailView.swift */; };
+		34392C5DB044F92F2FB9720E /* directory-schools.valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 165150719C69C9F962CBBE02 /* directory-schools.valid.json */; };
+		37FD8E079110171F74DB7D28 /* DirectoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9548C75616AF545139802627 /* DirectoryViewModel.swift */; };
+		48E8ED5AAAAC81627EFE6922 /* HSclubsGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C352AC848A45E4F3986F5774 /* HSclubsGuideApp.swift */; };
+		A043C34B1C7B3B4FA9A2E8D6 /* ContractDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9EF26E1B85DFC649CF1CA9 /* ContractDecoderTests.swift */; };
+		BBB3BD6B11BD685264012BA7 /* source-summary.invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E5C126ACB7EE503D25BE164 /* source-summary.invalid.json */; };
+		BFC70E1EACF4FCE03881E19D /* directory-schools.valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 165150719C69C9F962CBBE02 /* directory-schools.valid.json */; };
+		C535B22068F75C0DB9F98D78 /* ContractDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = F596CCD62A48DE1C917312F9 /* ContractDecoder.swift */; };
+		CED3503A97E210E09DB972AC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F58BC051459FE2389F7E39A3 /* Assets.xcassets */; };
+		CF66321CB17CA6027E53FCF6 /* DirectoryModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F8FE728FBF7CFE38B3ADBF /* DirectoryModels.swift */; };
+		D02911713EF73F871D627301 /* directory-schools.invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CA05E7D84B420ED3F704D6B /* directory-schools.invalid.json */; };
+		D0C53A56344DFA3012242458 /* source-summary.valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 1DA32C380EC748EF38C74A15 /* source-summary.valid.json */; };
+		D3BC9F31BE8BDB7CC78E876E /* DirectoryClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = A06374134A3AC1A5841D8D3C /* DirectoryClient.swift */; };
+		E65A656B96DCFCCA211E83C1 /* DirectoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AA4F27C1BEEB7AE419BA26 /* DirectoryView.swift */; };
+		E8789ED8F9D164296D4FD65E /* SchoolCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C1AF075856995F4CF96585 /* SchoolCard.swift */; };
+		EBA2F5F2E3BC7F713EFC56BB /* directory-schools.invalid.json in Resources */ = {isa = PBXBuildFile; fileRef = 2CA05E7D84B420ED3F704D6B /* directory-schools.invalid.json */; };
+		F99E36F741C8F46CDD4B0739 /* DirectoryViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF22A00EE935A2765F152ECC /* DirectoryViewModelTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AFC6166E36B10044BC0B57B4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D224885FA806F160BCE343E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6443D857689374449AFC0766;
+			remoteInfo = HSclubsGuide;
+		};
+		DB6A98FD848B7354F6D0FF3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D224885FA806F160BCE343E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6443D857689374449AFC0766;
+			remoteInfo = HSclubsGuide;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		165150719C69C9F962CBBE02 /* directory-schools.valid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "directory-schools.valid.json"; sourceTree = "<group>"; };
+		1CE2CA1F68306F4868704137 /* HSclubsGuideTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HSclubsGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1DA32C380EC748EF38C74A15 /* source-summary.valid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "source-summary.valid.json"; sourceTree = "<group>"; };
+		21B8EB17C50D5D2A35E8C5BB /* HSclubsGuide.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HSclubsGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA05E7D84B420ED3F704D6B /* directory-schools.invalid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "directory-schools.invalid.json"; sourceTree = "<group>"; };
+		3E5C126ACB7EE503D25BE164 /* source-summary.invalid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "source-summary.invalid.json"; sourceTree = "<group>"; };
+		419FB810E052392ED8BB3021 /* DiscoveryFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryFlowUITests.swift; sourceTree = "<group>"; };
+		4A22E3BB2C10B2846BB288EC /* HSclubsGuideUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HSclubsGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		65AA4F27C1BEEB7AE419BA26 /* DirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryView.swift; sourceTree = "<group>"; };
+		84F8FE728FBF7CFE38B3ADBF /* DirectoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryModels.swift; sourceTree = "<group>"; };
+		8D9EF26E1B85DFC649CF1CA9 /* ContractDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractDecoderTests.swift; sourceTree = "<group>"; };
+		9548C75616AF545139802627 /* DirectoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewModel.swift; sourceTree = "<group>"; };
+		A06374134A3AC1A5841D8D3C /* DirectoryClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryClient.swift; sourceTree = "<group>"; };
+		BF22A00EE935A2765F152ECC /* DirectoryViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryViewModelTests.swift; sourceTree = "<group>"; };
+		C318DF82168BE6B09079365C /* SchoolDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolDetailView.swift; sourceTree = "<group>"; };
+		C352AC848A45E4F3986F5774 /* HSclubsGuideApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HSclubsGuideApp.swift; sourceTree = "<group>"; };
+		D6C1AF075856995F4CF96585 /* SchoolCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SchoolCard.swift; sourceTree = "<group>"; };
+		F58BC051459FE2389F7E39A3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F596CCD62A48DE1C917312F9 /* ContractDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractDecoder.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		02462F8A5C9AE5A0877DCCF8 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C352AC848A45E4F3986F5774 /* HSclubsGuideApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		029FEDAA8ACBB13CF48F7659 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F58BC051459FE2389F7E39A3 /* Assets.xcassets */,
+				CA6B11E5F8DE4F9C3D5CD5FD /* Fixtures */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		214BA387BB519275D2FFE734 /* HSclubsGuideTests */ = {
+			isa = PBXGroup;
+			children = (
+				8D9EF26E1B85DFC649CF1CA9 /* ContractDecoderTests.swift */,
+				BF22A00EE935A2765F152ECC /* DirectoryViewModelTests.swift */,
+			);
+			path = HSclubsGuideTests;
+			sourceTree = "<group>";
+		};
+		2F010BACAC937E3E58B07AE3 = {
+			isa = PBXGroup;
+			children = (
+				717BB227814DD6DBA10A74F4 /* HSclubsGuide */,
+				214BA387BB519275D2FFE734 /* HSclubsGuideTests */,
+				5F7B2FFEA0CA376F5A0A98A9 /* HSclubsGuideUITests */,
+				91B8DD63B6DE91F6339502BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5BDBBDC13D7AD5AEBBBE78CD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				F596CCD62A48DE1C917312F9 /* ContractDecoder.swift */,
+				84F8FE728FBF7CFE38B3ADBF /* DirectoryModels.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		5F7B2FFEA0CA376F5A0A98A9 /* HSclubsGuideUITests */ = {
+			isa = PBXGroup;
+			children = (
+				419FB810E052392ED8BB3021 /* DiscoveryFlowUITests.swift */,
+			);
+			path = HSclubsGuideUITests;
+			sourceTree = "<group>";
+		};
+		717BB227814DD6DBA10A74F4 /* HSclubsGuide */ = {
+			isa = PBXGroup;
+			children = (
+				02462F8A5C9AE5A0877DCCF8 /* App */,
+				5BDBBDC13D7AD5AEBBBE78CD /* Models */,
+				029FEDAA8ACBB13CF48F7659 /* Resources */,
+				93856D801A50A9691FD1F896 /* Services */,
+				E7C3FB92AB4D1EA9C121A787 /* Views */,
+			);
+			path = HSclubsGuide;
+			sourceTree = "<group>";
+		};
+		91B8DD63B6DE91F6339502BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				21B8EB17C50D5D2A35E8C5BB /* HSclubsGuide.app */,
+				1CE2CA1F68306F4868704137 /* HSclubsGuideTests.xctest */,
+				4A22E3BB2C10B2846BB288EC /* HSclubsGuideUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93856D801A50A9691FD1F896 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				A06374134A3AC1A5841D8D3C /* DirectoryClient.swift */,
+				9548C75616AF545139802627 /* DirectoryViewModel.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		CA6B11E5F8DE4F9C3D5CD5FD /* Fixtures */ = {
+			isa = PBXGroup;
+			children = (
+				2CA05E7D84B420ED3F704D6B /* directory-schools.invalid.json */,
+				165150719C69C9F962CBBE02 /* directory-schools.valid.json */,
+				3E5C126ACB7EE503D25BE164 /* source-summary.invalid.json */,
+				1DA32C380EC748EF38C74A15 /* source-summary.valid.json */,
+			);
+			path = Fixtures;
+			sourceTree = "<group>";
+		};
+		E7C3FB92AB4D1EA9C121A787 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				65AA4F27C1BEEB7AE419BA26 /* DirectoryView.swift */,
+				D6C1AF075856995F4CF96585 /* SchoolCard.swift */,
+				C318DF82168BE6B09079365C /* SchoolDetailView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		175815609A285A6282B0B54D /* HSclubsGuideUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 35CB59079D5A737E76326545 /* Build configuration list for PBXNativeTarget "HSclubsGuideUITests" */;
+			buildPhases = (
+				06D2348D63147F472DA9CE71 /* Sources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9B49C7E06847072CD09E86B1 /* PBXTargetDependency */,
+			);
+			name = HSclubsGuideUITests;
+			packageProductDependencies = (
+			);
+			productName = HSclubsGuideUITests;
+			productReference = 4A22E3BB2C10B2846BB288EC /* HSclubsGuideUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		6443D857689374449AFC0766 /* HSclubsGuide */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A6230C7AC2F05F030C73A5E7 /* Build configuration list for PBXNativeTarget "HSclubsGuide" */;
+			buildPhases = (
+				785D81269C02D7739F606899 /* Sources */,
+				424E7567816D5F9EB16CB744 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HSclubsGuide;
+			packageProductDependencies = (
+			);
+			productName = HSclubsGuide;
+			productReference = 21B8EB17C50D5D2A35E8C5BB /* HSclubsGuide.app */;
+			productType = "com.apple.product-type.application";
+		};
+		7AC3BB54975AFE6D7E4997AF /* HSclubsGuideTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9178DC1B089ABDDFD83F0C30 /* Build configuration list for PBXNativeTarget "HSclubsGuideTests" */;
+			buildPhases = (
+				D009B52E1938ECDBC1794E2B /* Sources */,
+				1B381CFB9C2BA2BBF0F7C4B8 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				89FD3F718DA07FC7BE4E4BC3 /* PBXTargetDependency */,
+			);
+			name = HSclubsGuideTests;
+			packageProductDependencies = (
+			);
+			productName = HSclubsGuideTests;
+			productReference = 1CE2CA1F68306F4868704137 /* HSclubsGuideTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D224885FA806F160BCE343E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 2600;
+				TargetAttributes = {
+					175815609A285A6282B0B54D = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+						TestTargetID = 6443D857689374449AFC0766;
+					};
+					6443D857689374449AFC0766 = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+					7AC3BB54975AFE6D7E4997AF = {
+						DevelopmentTeam = "";
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = FD8DCB82034A2F4AEE1F583D /* Build configuration list for PBXProject "HSclubsGuide" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 2F010BACAC937E3E58B07AE3;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 91B8DD63B6DE91F6339502BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6443D857689374449AFC0766 /* HSclubsGuide */,
+				7AC3BB54975AFE6D7E4997AF /* HSclubsGuideTests */,
+				175815609A285A6282B0B54D /* HSclubsGuideUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1B381CFB9C2BA2BBF0F7C4B8 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EBA2F5F2E3BC7F713EFC56BB /* directory-schools.invalid.json in Resources */,
+				34392C5DB044F92F2FB9720E /* directory-schools.valid.json in Resources */,
+				BBB3BD6B11BD685264012BA7 /* source-summary.invalid.json in Resources */,
+				1E898AD8EFD7EEDD0C9A0AC7 /* source-summary.valid.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		424E7567816D5F9EB16CB744 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CED3503A97E210E09DB972AC /* Assets.xcassets in Resources */,
+				D02911713EF73F871D627301 /* directory-schools.invalid.json in Resources */,
+				BFC70E1EACF4FCE03881E19D /* directory-schools.valid.json in Resources */,
+				1EC032C0046E35B91EEED333 /* source-summary.invalid.json in Resources */,
+				D0C53A56344DFA3012242458 /* source-summary.valid.json in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		06D2348D63147F472DA9CE71 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				013416B3E5F87645FDDBCF2D /* DiscoveryFlowUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		785D81269C02D7739F606899 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C535B22068F75C0DB9F98D78 /* ContractDecoder.swift in Sources */,
+				D3BC9F31BE8BDB7CC78E876E /* DirectoryClient.swift in Sources */,
+				CF66321CB17CA6027E53FCF6 /* DirectoryModels.swift in Sources */,
+				E65A656B96DCFCCA211E83C1 /* DirectoryView.swift in Sources */,
+				37FD8E079110171F74DB7D28 /* DirectoryViewModel.swift in Sources */,
+				48E8ED5AAAAC81627EFE6922 /* HSclubsGuideApp.swift in Sources */,
+				E8789ED8F9D164296D4FD65E /* SchoolCard.swift in Sources */,
+				3280D7EEC33F3ACA368EF6CE /* SchoolDetailView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D009B52E1938ECDBC1794E2B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A043C34B1C7B3B4FA9A2E8D6 /* ContractDecoderTests.swift in Sources */,
+				F99E36F741C8F46CDD4B0739 /* DirectoryViewModelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		89FD3F718DA07FC7BE4E4BC3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6443D857689374449AFC0766 /* HSclubsGuide */;
+			targetProxy = DB6A98FD848B7354F6D0FF3E /* PBXContainerItemProxy */;
+		};
+		9B49C7E06847072CD09E86B1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6443D857689374449AFC0766 /* HSclubsGuide */;
+			targetProxy = AFC6166E36B10044BC0B57B4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		00FAAAC973EED5BD1D5B54B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = "";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "HSclubs Guide";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+		048DE06E799ABB3F3F07B84F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hsclubs.guide.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HSclubsGuide.app/HSclubsGuide";
+			};
+			name = Release;
+		};
+		11A78443B6E4D9729DED0B67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hsclubs.guide.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HSclubsGuide;
+			};
+			name = Debug;
+		};
+		8151DB3DE3267329CA0A47FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = "";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "HSclubs Guide";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				MARKETING_VERSION = 0.1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 6.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		943CD1E549B2ACDAF0159804 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hsclubs.guide;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		95A59C361EF0FE0AA4D47BDA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hsclubs.guide;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		C0DE15C072B0DCD686A2BD3D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hsclubs.guide.tests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HSclubsGuide.app/HSclubsGuide";
+			};
+			name = Debug;
+		};
+		C58C1915A61B38BC82230E7B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = org.hsclubs.guide.uitests;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = HSclubsGuide;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		35CB59079D5A737E76326545 /* Build configuration list for PBXNativeTarget "HSclubsGuideUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11A78443B6E4D9729DED0B67 /* Debug */,
+				C58C1915A61B38BC82230E7B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		9178DC1B089ABDDFD83F0C30 /* Build configuration list for PBXNativeTarget "HSclubsGuideTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C0DE15C072B0DCD686A2BD3D /* Debug */,
+				048DE06E799ABB3F3F07B84F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		A6230C7AC2F05F030C73A5E7 /* Build configuration list for PBXNativeTarget "HSclubsGuide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				943CD1E549B2ACDAF0159804 /* Debug */,
+				95A59C361EF0FE0AA4D47BDA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		FD8DCB82034A2F4AEE1F583D /* Build configuration list for PBXProject "HSclubsGuide" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8151DB3DE3267329CA0A47FB /* Debug */,
+				00FAAAC973EED5BD1D5B54B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D224885FA806F160BCE343E0 /* Project object */;
+}

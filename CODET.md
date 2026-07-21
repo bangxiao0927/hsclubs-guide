@@ -1,8 +1,10 @@
 ## Project Direction
 
-- This public repository contains only the HSclubs school-discovery frontend.
+- This public repository contains only the native HSclubs school-discovery iOS app.
 - Do not add club management, memberships, applications, shared login, or multi-tenant school workflows.
-- Use Vue 3, Vite, and TypeScript for the frontend.
+- Use Swift 6, SwiftUI, and an Xcode iOS application project.
+- Target iPhone on iOS 17 or newer. Keep the interface mobile-first and accessible.
+- Keep `project.yml` and the committed Xcode project synchronized with XcodeGen.
 - Use contract fixtures until the source summary API passes the readiness gate in `docs/DEVELOPMENT_PLAN.md`.
 - Keep collector code and secrets in a separate private repository.
 - Keep all documentation and user-facing copy in English.
@@ -11,4 +13,4 @@
 ## Product Direction Update
 
 - The intended client product is a native iOS app, not a responsive web application.
-- Before restructuring this repository, confirm whether the iOS app replaces the existing Vue frontend or belongs in a separate repository.
+- The native iOS app replaces the previous Vue frontend in this repository.

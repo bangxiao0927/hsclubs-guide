@@ -1,0 +1,20 @@
+{
+  "schemaVersion": "1.0",
+  "generatedAt": "2026-07-19T20:25:00Z",
+  "schools": [
+    {
+      "slug": "private-school",
+      "name": "Private School",
+      "shortName": "PS",
+      "canonicalUrl": "https://clubs.private-school.example",
+      "location": { "city": "Example", "region": "CA", "country": "US" },
+      "verificationStatus": "verified",
+      "availability": "fresh",
+      "clubCount": 1,
+      "categories": {},
+      "sourceUpdatedAt": null,
+      "lastSuccessfulCollectionAt": null,
+      "ownerEmail": "private@example.org"
+    }
+  ]
+}
