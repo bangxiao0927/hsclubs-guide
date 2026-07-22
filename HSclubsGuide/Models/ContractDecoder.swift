@@ -29,6 +29,11 @@ enum ContractDecoder {
         "schemaVersion", "schoolName", "shortName", "slug", "canonicalUrl", "status",
         "clubCount", "categories", "memberCount", "lastUpdatedAt", "generatedAt", "dataHash",
     ]
+    private static let schoolClubsKeys: Set<String> = ["schemaVersion", "slug", "generatedAt", "clubs"]
+    private static let clubKeys: Set<String> = [
+        "id", "name", "category", "advisor", "location", "meetingSchedule",
+        "description", "instagramUrl",
+    ]
 
     static func decodeDirectory(from data: Data) throws -> DirectoryResponse {
         let object = try jsonObject(from: data)
@@ -67,6 +72,44 @@ enum ContractDecoder {
             throw ContractError.invalidField("categories")
         }
         return summary
+    }
+
+    static func decodeSchoolClubs(from data: Data) throws -> SchoolClubsResponse {
+        let root = try dictionary(try jsonObject(from: data))
+        try rejectUnknownKeys(in: root, allowing: schoolClubsKeys)
+
+        guard let clubs = root["clubs"] as? [Any] else {
+            throw ContractError.invalidField("clubs")
+        }
+        for item in clubs {
+            try rejectUnknownKeys(in: try dictionary(item), allowing: clubKeys)
+        }
+
+        let response = try decoder().decode(SchoolClubsResponse.self, from: data)
+        try validate(response)
+        return response
+    }
+
+    private static func validate(_ response: SchoolClubsResponse) throws {
+        guard response.schemaVersion == "1.0" else {
+            throw ContractError.invalidField("schemaVersion")
+        }
+        guard response.slug.range(
+            of: "^[a-z0-9]+(?:-[a-z0-9]+)*$",
+            options: .regularExpression
+        ) != nil else {
+            throw ContractError.invalidField("slug")
+        }
+        for club in response.clubs {
+            guard !club.name.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty,
+                  !club.category.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            else {
+                throw ContractError.invalidField("club")
+            }
+            if let instagramURL = club.instagramUrl {
+                try validateHTTPS(instagramURL)
+            }
+        }
     }
 
     private static func validate(_ response: DirectoryResponse) throws {

@@ -10,8 +10,15 @@
       "location": { "city": "Mountain View", "region": "CA", "country": "US" },
       "verificationStatus": "verified",
       "availability": "fresh",
-      "clubCount": 42,
-      "categories": { "Academic": 12, "Arts": 8, "Community": 7 },
+      "clubCount": 18,
+      "categories": {
+        "Competition & Strategy": 3,
+        "Creative Arts & Media": 3,
+        "Culture & Identity": 3,
+        "STEM & Innovation": 3,
+        "Service & Leadership": 3,
+        "Wellness & Athletics": 3
+      },
       "sourceUpdatedAt": "2026-07-19T20:15:30Z",
       "lastSuccessfulCollectionAt": "2026-07-19T20:20:00Z"
     },
@@ -23,8 +30,8 @@
       "location": { "city": "Lakeside", "region": "BC", "country": "CA" },
       "verificationStatus": "verified",
       "availability": "stale",
-      "clubCount": 18,
-      "categories": { "Culture": 6, "Sports": 5 },
+      "clubCount": 6,
+      "categories": { "Culture": 3, "Sports": 3 },
       "sourceUpdatedAt": "2026-07-10T11:00:00Z",
       "lastSuccessfulCollectionAt": "2026-07-10T11:05:00Z"
     },
@@ -49,7 +56,7 @@
       "location": { "city": "Austin", "region": "TX", "country": "US" },
       "verificationStatus": "verified",
       "availability": "suspended",
-      "clubCount": 9,
+      "clubCount": 4,
       "categories": { "Service": 4 },
       "sourceUpdatedAt": "2026-07-01T08:00:00Z",
       "lastSuccessfulCollectionAt": "2026-07-01T08:05:00Z"

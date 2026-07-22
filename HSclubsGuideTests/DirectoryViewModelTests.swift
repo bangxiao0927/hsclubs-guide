@@ -67,4 +67,8 @@ private struct StubClient: DirectoryClient {
     func fetchSchools() async throws -> DirectoryResponse {
         try result.get()
     }
+
+    func fetchClubs(forSlug slug: String) async throws -> SchoolClubsResponse {
+        SchoolClubsResponse(schemaVersion: "1.0", slug: slug, generatedAt: Date(), clubs: [])
+    }
 }

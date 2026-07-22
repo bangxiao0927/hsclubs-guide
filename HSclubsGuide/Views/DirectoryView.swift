@@ -2,8 +2,10 @@ import SwiftUI
 
 struct DirectoryView: View {
     @StateObject private var viewModel: DirectoryViewModel
+    private let client: any DirectoryClient
 
     init(client: any DirectoryClient) {
+        self.client = client
         _viewModel = StateObject(wrappedValue: DirectoryViewModel(client: client))
     }
 
@@ -14,7 +16,7 @@ struct DirectoryView: View {
                 case .loading:
                     ProgressView("Loading schools")
                         .frame(maxWidth: .infinity, maxHeight: .infinity)
-                        .background(GuideTheme.background)
+                        .background(GuideTheme.backgroundGradient)
                 case .failed(let message):
                     ContentUnavailableView {
                         Label("Directory unavailable", systemImage: "wifi.exclamationmark")
@@ -23,9 +25,9 @@ struct DirectoryView: View {
                     } actions: {
                         Button("Try again") { Task { await viewModel.load() } }
                             .buttonStyle(.borderedProminent)
-                            .tint(GuideTheme.forest)
+                            .tint(GuideTheme.primary)
                     }
-                    .background(GuideTheme.background)
+                    .background(GuideTheme.backgroundGradient)
                 case .loaded:
                     schoolList
                 }
@@ -33,7 +35,7 @@ struct DirectoryView: View {
             .navigationTitle("HSclubs Guide")
             .searchable(text: $viewModel.searchText, prompt: "School, city, or region")
         }
-        .tint(GuideTheme.forest)
+        .tint(GuideTheme.primary)
         .task { await viewModel.load() }
     }
 
@@ -44,14 +46,14 @@ struct DirectoryView: View {
                     Text("SCHOOL DISCOVERY, MADE CLEAR")
                         .font(.caption.weight(.bold))
                         .tracking(1.2)
-                        .foregroundStyle(GuideTheme.amber)
+                        .foregroundStyle(GuideTheme.primary)
                     Text("Find your school's club directory.")
-                        .font(.system(.largeTitle, design: .serif).bold())
-                        .foregroundStyle(GuideTheme.forest)
+                        .font(.largeTitle.bold())
+                        .foregroundStyle(GuideTheme.textPrimary)
                         .accessibilityAddTraits(.isHeader)
                     Text("HSclubs Guide points students to verified, school-owned club sites.")
                         .font(.body)
-                        .foregroundStyle(GuideTheme.muted)
+                        .foregroundStyle(GuideTheme.textMuted)
                 }
                 .padding(.bottom, 8)
 
@@ -71,10 +73,10 @@ struct DirectoryView: View {
             }
             .padding()
         }
-        .background(GuideTheme.background)
+        .background(GuideTheme.backgroundGradient)
         .navigationDestination(for: String.self) { slug in
             if let school = viewModel.school(withSlug: slug) {
-                SchoolDetailView(school: school)
+                SchoolDetailView(school: school, client: client)
             }
         }
     }

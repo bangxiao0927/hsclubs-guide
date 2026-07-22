@@ -6,7 +6,7 @@ final class DiscoveryFlowUITests: XCTestCase {
         continueAfterFailure = false
     }
 
-    func testSearchOpensSchoolDetail() throws {
+    func testSearchOpensSchoolClubDirectory() throws {
         let app = XCUIApplication()
         app.launchArguments = ["--use-fixture-directory"]
         app.launch()
@@ -18,7 +18,10 @@ final class DiscoveryFlowUITests: XCTestCase {
         let card = app.buttons["school-card-mountain-view"]
         XCTAssertTrue(card.waitForExistence(timeout: 2))
         card.tap()
-        let outboundLink = app.descendants(matching: .any)["open-school-site"]
-        XCTAssertTrue(outboundLink.waitForExistence(timeout: 2))
+
+        // The per-school club directory should load with its search field and real clubs.
+        let clubSearch = app.textFields["club-search"]
+        XCTAssertTrue(clubSearch.waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Chess Club"].waitForExistence(timeout: 5))
     }
 }

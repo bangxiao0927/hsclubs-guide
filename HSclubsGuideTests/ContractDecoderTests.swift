@@ -25,6 +25,48 @@ final class ContractDecoderTests: XCTestCase {
         XCTAssertEqual(summary.clubCount, 42)
     }
 
+    func testValidSchoolClubsFixtureDecodes() throws {
+        let response = try ContractDecoder.decodeSchoolClubs(
+            from: try fixture(named: "school-clubs.mountain-view.valid")
+        )
+
+        XCTAssertEqual(response.schemaVersion, "1.0")
+        XCTAssertEqual(response.slug, "mountain-view")
+        XCTAssertEqual(response.clubs.count, 18)
+        XCTAssertEqual(response.clubs.first?.name, "Chess Club")
+        XCTAssertEqual(response.clubs.first?.category, "Competition & Strategy")
+    }
+
+    func testSchoolClubsRejectsUnknownClubFields() throws {
+        let json = """
+        {
+          "schemaVersion": "1.0",
+          "slug": "mountain-view",
+          "generatedAt": "2026-07-19T20:20:00Z",
+          "clubs": [
+            { "id": 1, "name": "Chess Club", "category": "Strategy", "description": "Play.", "memberEmail": "secret@example.com" }
+          ]
+        }
+        """
+        XCTAssertThrowsError(try ContractDecoder.decodeSchoolClubs(from: Data(json.utf8))) { error in
+            XCTAssertEqual(error as? ContractError, .unknownFields(["memberEmail"]))
+        }
+    }
+
+    func testSchoolClubsRejectsInsecureInstagramURL() throws {
+        let json = """
+        {
+          "schemaVersion": "1.0",
+          "slug": "mountain-view",
+          "generatedAt": "2026-07-19T20:20:00Z",
+          "clubs": [
+            { "id": 1, "name": "Chess Club", "category": "Strategy", "description": "Play.", "instagramUrl": "http://instagram.com/insecure" }
+          ]
+        }
+        """
+        XCTAssertThrowsError(try ContractDecoder.decodeSchoolClubs(from: Data(json.utf8)))
+    }
+
     func testInvalidSourceSummaryAndPrivateFieldsAreRejected() throws {
         XCTAssertThrowsError(
             try ContractDecoder.decodeSourceSummary(from: try fixture(named: "source-summary.invalid"))

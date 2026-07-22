@@ -1,0 +1,67 @@
+{
+  "schemaVersion": "1.0",
+  "slug": "lakeside-secondary",
+  "generatedAt": "2026-07-10T11:05:00Z",
+  "clubs": [
+    {
+      "id": 1,
+      "name": "World Cultures Society",
+      "category": "Culture",
+      "advisor": "Priya Sharma",
+      "location": "Room 204",
+      "meetingSchedule": "Wednesday \u00b7 Weekly \u00b7 Lunch",
+      "description": "The World Cultures Society celebrates the many backgrounds represented at Lakeside Secondary through food fairs, language exchanges, and guest speakers. Members plan the school's annual heritage week and share traditions from their own families.",
+      "instagramUrl": "https://instagram.com/lss.worldcultures"
+    },
+    {
+      "id": 2,
+      "name": "Francophone Club",
+      "category": "Culture",
+      "advisor": "Marc Tremblay",
+      "location": "Room 118",
+      "meetingSchedule": "Monday \u00b7 Biweekly \u00b7 After School",
+      "description": "A relaxed space to practice French conversation, watch Quebecois films, and enjoy cafe-style meetups. Beginners and fluent speakers are equally welcome.",
+      "instagramUrl": null
+    },
+    {
+      "id": 3,
+      "name": "Indigenous Voices Circle",
+      "category": "Culture",
+      "advisor": "Dawn Lightfoot",
+      "location": "Library Commons",
+      "meetingSchedule": "Friday \u00b7 Weekly \u00b7 Lunch",
+      "description": "Indigenous Voices Circle honours local First Nations culture with storytelling, art, and community partnerships. The club leads Orange Shirt Day and land-acknowledgement education across the school.",
+      "instagramUrl": "https://instagram.com/lss.indigenousvoices"
+    },
+    {
+      "id": 4,
+      "name": "Rock Climbing Club",
+      "category": "Sports",
+      "advisor": "Jordan Neel",
+      "location": "Gymnasium",
+      "meetingSchedule": "Tuesday \u00b7 Weekly \u00b7 After School",
+      "description": "Rock Climbing Club takes members to the indoor bouldering wall to build strength, technique, and confidence. All experience levels are supported, and safety gear is provided.",
+      "instagramUrl": "https://instagram.com/lss.climbing"
+    },
+    {
+      "id": 5,
+      "name": "Ultimate Frisbee",
+      "category": "Sports",
+      "advisor": "Chloe Bennett",
+      "location": "North Field",
+      "meetingSchedule": "Thursday \u00b7 Weekly \u00b7 After School",
+      "description": "Ultimate Frisbee is a fast, friendly, self-refereed sport focused on spirit of the game. The club runs casual scrimmages and enters the regional spring league.",
+      "instagramUrl": null
+    },
+    {
+      "id": 6,
+      "name": "Trail Running Club",
+      "category": "Sports",
+      "advisor": "Sam Okafor",
+      "location": "Athletics Office",
+      "meetingSchedule": "Wednesday \u00b7 Weekly \u00b7 After School",
+      "description": "Trail Running Club explores the lakeside paths around campus while training for community fun runs. Members set personal goals and cheer each other on regardless of pace.",
+      "instagramUrl": "https://instagram.com/lss.trailrunning"
+    }
+  ]
+}

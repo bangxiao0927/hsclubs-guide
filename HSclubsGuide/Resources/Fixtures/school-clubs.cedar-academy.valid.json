@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "slug": "cedar-academy",
+  "generatedAt": "2026-07-01T08:05:00Z",
+  "clubs": [
+    {
+      "id": 1,
+      "name": "Community Garden Corps",
+      "category": "Service",
+      "advisor": "Elena Ruiz",
+      "location": "Courtyard",
+      "meetingSchedule": "Monday \u00b7 Weekly \u00b7 After School",
+      "description": "Community Garden Corps tends the campus garden and donates fresh produce to a local food bank. Members learn sustainable growing practices while giving back to neighbours in need.",
+      "instagramUrl": "https://instagram.com/cedar.gardencorps"
+    },
+    {
+      "id": 2,
+      "name": "Peer Tutoring Network",
+      "category": "Service",
+      "advisor": "David Chen",
+      "location": "Room 220",
+      "meetingSchedule": "Tuesday \u00b7 Weekly \u00b7 Lunch",
+      "description": "The Peer Tutoring Network pairs upper-year students with classmates who want extra support in math, science, and writing. Every session is free and welcoming.",
+      "instagramUrl": null
+    },
+    {
+      "id": 3,
+      "name": "Senior Companions Club",
+      "category": "Service",
+      "advisor": "Grace Whitfield",
+      "location": "Room 105",
+      "meetingSchedule": "Thursday \u00b7 Biweekly \u00b7 After School",
+      "description": "Senior Companions Club visits a nearby retirement residence to share music, games, and conversation. Members build lasting friendships across generations.",
+      "instagramUrl": "https://instagram.com/cedar.seniorcompanions"
+    },
+    {
+      "id": 4,
+      "name": "Coastal Cleanup Crew",
+      "category": "Service",
+      "advisor": "Marcus Lee",
+      "location": "Front Entrance",
+      "meetingSchedule": "Friday \u00b7 Monthly \u00b7 After School",
+      "description": "Coastal Cleanup Crew organizes monthly litter cleanups along local waterways and tracks the impact of its work. The club also runs waste-reduction campaigns on campus.",
+      "instagramUrl": null
+    }
+  ]
+}
