@@ -5,16 +5,16 @@ struct AppEnvironment: Sendable {
 
     let directoryClient: any DirectoryClient
 
-    init(bundle: Bundle = .main, forceFixtures: Bool = false) {
-        let baseURLValue = ProcessInfo.processInfo.environment["DIRECTORY_API_BASE_URL"]
-            ?? bundle.object(forInfoDictionaryKey: "DIRECTORY_API_BASE_URL") as? String
-            ?? Self.defaultDirectoryBaseURL
-        let fixtureEnvironment = ProcessInfo.processInfo.environment["USE_FIXTURE_DIRECTORY"] == "true"
-            || ProcessInfo.processInfo.arguments.contains("--use-fixture-directory")
-            || bundle.object(forInfoDictionaryKey: "USE_FIXTURE_DIRECTORY") as? Bool == true
+    init(bundle: Bundle = .main) {
+        guard let baseURLValue = Self.firstConfiguredValue(
+            forKey: "DIRECTORY_API_BASE_URL",
+            bundle: bundle
+        ) else {
+            directoryClient = FixtureDirectoryClient(bundle: bundle)
+            return
+        }
 
-        guard !forceFixtures, !fixtureEnvironment,
-              let baseURL = URL(string: baseURLValue),
+        guard let baseURL = URL(string: baseURLValue),
               let client = LiveDirectoryClient(baseURL: baseURL)
         else {
             directoryClient = FixtureDirectoryClient(bundle: bundle)
@@ -22,5 +22,12 @@ struct AppEnvironment: Sendable {
         }
 
         directoryClient = client
+    }
+
+    private static func firstConfiguredValue(forKey key: String, bundle: Bundle) -> String? {
+        if let value = ProcessInfo.processInfo.environment[key], !value.isEmpty {
+            return value
+        }
+        return bundle.object(forInfoDictionaryKey: key) as? String
     }
 }
