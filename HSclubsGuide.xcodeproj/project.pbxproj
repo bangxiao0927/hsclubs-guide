@@ -14,7 +14,6 @@
 		34392C5DB044F92F2FB9720E /* directory-schools.valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 165150719C69C9F962CBBE02 /* directory-schools.valid.json */; };
 		37FD8E079110171F74DB7D28 /* DirectoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9548C75616AF545139802627 /* DirectoryViewModel.swift */; };
 		48E8ED5AAAAC81627EFE6922 /* HSclubsGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C352AC848A45E4F3986F5774 /* HSclubsGuideApp.swift */; };
-		58FACD74A7270203BBBC4987 /* URLSessionProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62DBD3051C3A8C0FFEBF38EA /* URLSessionProtocol.swift */; };
 		81E7EB4697549374D1F1DA60 /* GuideTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = C424BAC9E88ECB3595822838 /* GuideTheme.swift */; };
 		9D3DF96CBBCC4A3A9A355EC4 /* AppEnvironment.swift in Sources */ = {isa = PBXBuildFile; fileRef = A61AE39987A04F7A86851987 /* AppEnvironment.swift */; };
 		A043C34B1C7B3B4FA9A2E8D6 /* ContractDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9EF26E1B85DFC649CF1CA9 /* ContractDecoderTests.swift */; };
@@ -58,7 +57,6 @@
 		3E5C126ACB7EE503D25BE164 /* source-summary.invalid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "source-summary.invalid.json"; sourceTree = "<group>"; };
 		419FB810E052392ED8BB3021 /* DiscoveryFlowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoveryFlowUITests.swift; sourceTree = "<group>"; };
 		4A22E3BB2C10B2846BB288EC /* HSclubsGuideUITests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HSclubsGuideUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		62DBD3051C3A8C0FFEBF38EA /* URLSessionProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionProtocol.swift; sourceTree = "<group>"; };
 		65AA4F27C1BEEB7AE419BA26 /* DirectoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryView.swift; sourceTree = "<group>"; };
 		84F8FE728FBF7CFE38B3ADBF /* DirectoryModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DirectoryModels.swift; sourceTree = "<group>"; };
 		8D9EF26E1B85DFC649CF1CA9 /* ContractDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContractDecoderTests.swift; sourceTree = "<group>"; };
@@ -156,7 +154,6 @@
 				A61AE39987A04F7A86851987 /* AppEnvironment.swift */,
 				A06374134A3AC1A5841D8D3C /* DirectoryClient.swift */,
 				9548C75616AF545139802627 /* DirectoryViewModel.swift */,
-				62DBD3051C3A8C0FFEBF38EA /* URLSessionProtocol.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -335,7 +332,6 @@
 				48E8ED5AAAAC81627EFE6922 /* HSclubsGuideApp.swift in Sources */,
 				E8789ED8F9D164296D4FD65E /* SchoolCard.swift in Sources */,
 				3280D7EEC33F3ACA368EF6CE /* SchoolDetailView.swift in Sources */,
-				58FACD74A7270203BBBC4987 /* URLSessionProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,7 +410,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "HSclubs Guide";
-				INFOPLIST_KEY_DIRECTORY_API_BASE_URL = "https://api.guide.example.org";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -520,7 +515,6 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_CFBundleDisplayName = "HSclubs Guide";
-				INFOPLIST_KEY_DIRECTORY_API_BASE_URL = "https://api.guide.example.org";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.education";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -561,7 +555,6 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
-				INFOPLIST_KEY_DIRECTORY_API_BASE_URL = "https://api.guide.example.org";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

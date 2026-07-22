@@ -65,8 +65,6 @@ jobs:
           diff -ru /tmp/HSclubsGuide.xcodeproj HSclubsGuide.xcodeproj
 
       - name: Build and test
-        env:
-          USE_FIXTURE_DIRECTORY: true
         run: |
           set -o pipefail
           xcodebuild test \

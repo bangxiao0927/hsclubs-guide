@@ -6,6 +6,7 @@
 - Target iPhone on iOS 17 or newer. Keep the interface mobile-first and accessible.
 - Keep `project.yml` and the committed Xcode project synchronized with XcodeGen.
 - Use contract fixtures until the source summary API passes the readiness gate in `docs/DEVELOPMENT_PLAN.md`.
+- Keep the app fixture-only and leave live backend integration unconfigured until the user explicitly requests it.
 - Keep collector code and secrets in a separate private repository.
 - Keep all documentation and user-facing copy in English.
 - After completing requested changes, automatically commit and push them unless the user says otherwise.

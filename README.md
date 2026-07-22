@@ -48,7 +48,7 @@ xcodegen generate
 
 - Swift 6 and SwiftUI application lifecycle.
 - `NavigationStack` discovery and school detail flow.
-- `AppEnvironment` fixture/live client selection through reviewed HTTPS configuration.
+- `AppEnvironment` uses bundled fixtures and performs no backend requests.
 - Strict Foundation-based JSON contract validation.
 - Bundled fixtures as the default and only data source until API readiness.
 - XCTest unit and UI coverage.
