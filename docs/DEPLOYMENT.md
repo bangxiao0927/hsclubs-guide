@@ -12,7 +12,7 @@ repository. The app must never collect directly from a school-owned endpoint.
 
 | Environment | App data | Distribution |
 |---|---|---|
-| Local | Bundled contract fixtures | Xcode Simulator |
+| Local | Bundled fixtures or an approved HTTPS directory API | Xcode Simulator |
 | CI | Bundled contract fixtures | GitHub-hosted Simulator |
 | Internal pilot | Staging directory API after readiness | TestFlight internal testing |
 | Production | Production sanitized directory API | App Store |
@@ -31,6 +31,11 @@ Prerequisites:
 
 Open `HSclubsGuide.xcodeproj`, select an iPhone Simulator, and run the `HSclubsGuide`
 scheme. No Apple Developer account is required for Simulator builds.
+
+The app resolves the directory endpoint from `DIRECTORY_API_BASE_URL`. A value in the
+generated Info.plist supplies the placeholder deployment origin; an environment variable
+overrides it in Xcode run settings. The endpoint must be HTTPS without credentials,
+query, or fragment. Set `USE_FIXTURE_DIRECTORY=true` to force bundled fixture mode.
 
 Command-line validation:
 

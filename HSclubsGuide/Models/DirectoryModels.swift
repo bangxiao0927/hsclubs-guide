@@ -6,7 +6,7 @@ struct DirectoryResponse: Decodable, Sendable {
     let schools: [School]
 }
 
-struct School: Decodable, Identifiable, Sendable {
+struct School: Decodable, Identifiable, Sendable, Equatable, Hashable {
     let slug: String
     let name: String
     let shortName: String
@@ -28,7 +28,7 @@ struct School: Decodable, Identifiable, Sendable {
     }
 }
 
-struct SchoolLocation: Decodable, Sendable {
+struct SchoolLocation: Decodable, Sendable, Equatable, Hashable {
     let city: String
     let region: String
     let country: String

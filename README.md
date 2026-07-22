@@ -48,6 +48,7 @@ xcodegen generate
 
 - Swift 6 and SwiftUI application lifecycle.
 - `NavigationStack` discovery and school detail flow.
+- `AppEnvironment` fixture/live client selection through reviewed HTTPS configuration.
 - Strict Foundation-based JSON contract validation.
 - Bundled fixtures as the default and only data source until API readiness.
 - XCTest unit and UI coverage.
@@ -57,6 +58,7 @@ xcodegen generate
 
 - [Development plan](docs/DEVELOPMENT_PLAN.md)
 - [iOS foundation](docs/IOS_FOUNDATION.md)
+- [Directory API integration](docs/DIRECTORY_API_INTEGRATION.md)
 - [1st repo backend audit](docs/FIRST_REPO_BACKEND_AUDIT.md)
 - [Distribution guide](docs/DEPLOYMENT.md)
 

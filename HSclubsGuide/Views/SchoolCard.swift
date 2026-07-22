@@ -8,10 +8,10 @@ struct SchoolCard: View {
             HStack(alignment: .top, spacing: 12) {
                 ZStack {
                     RoundedRectangle(cornerRadius: 12)
-                        .fill(Color.accentColor.opacity(0.14))
+                        .fill(GuideTheme.paleGreen)
                     Text(school.shortName.prefix(3))
                         .font(.caption.bold())
-                        .foregroundStyle(Color.accentColor)
+                        .foregroundStyle(GuideTheme.forest)
                 }
                 .frame(width: 48, height: 48)
                 .accessibilityHidden(true)
@@ -19,10 +19,10 @@ struct SchoolCard: View {
                 VStack(alignment: .leading, spacing: 4) {
                     Text(school.name)
                         .font(.headline)
-                        .foregroundStyle(.primary)
+                        .foregroundStyle(GuideTheme.forest)
                     Text(school.location.displayName)
                         .font(.subheadline)
-                        .foregroundStyle(.secondary)
+                        .foregroundStyle(GuideTheme.muted)
                 }
                 Spacer(minLength: 0)
                 Image(systemName: "chevron.right")
@@ -32,7 +32,7 @@ struct SchoolCard: View {
 
             HStack {
                 Label("Verified", systemImage: "checkmark.seal.fill")
-                    .foregroundStyle(.green)
+                    .foregroundStyle(GuideTheme.forest)
                 Spacer()
                 if let clubCount = school.clubCount {
                     Text("\(clubCount) clubs")
@@ -49,14 +49,15 @@ struct SchoolCard: View {
         .background(.background, in: RoundedRectangle(cornerRadius: 20))
         .overlay {
             RoundedRectangle(cornerRadius: 20)
-                .stroke(Color.primary.opacity(0.08), lineWidth: 1)
+                .stroke(GuideTheme.border, lineWidth: 1)
         }
+        .shadow(color: GuideTheme.forest.opacity(0.08), radius: 16, y: 8)
     }
 
     private var availabilityColor: Color {
         switch school.availability {
-        case .fresh: .green
-        case .stale: .orange
+        case .fresh: GuideTheme.forest
+        case .stale: GuideTheme.amber
         case .unavailable, .suspended: .red
         }
     }
