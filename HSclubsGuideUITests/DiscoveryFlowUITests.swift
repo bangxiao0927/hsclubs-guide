@@ -11,7 +11,7 @@ final class DiscoveryFlowUITests: XCTestCase {
         app.launchArguments = ["--use-fixture-directory"]
         app.launch()
 
-        XCTAssertTrue(app.staticTexts["Find your school"].waitForExistence(timeout: 5))
+        XCTAssertTrue(app.staticTexts["Find your school's club directory."].waitForExistence(timeout: 5))
         app.searchFields["School, city, or region"].tap()
         app.searchFields["School, city, or region"].typeText("MVHS")
 
