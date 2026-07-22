@@ -68,3 +68,52 @@ private struct StubClient: DirectoryClient {
         try result.get()
     }
 }
+
+final class LiveDirectoryClientTests: XCTestCase {
+    func testRejectsInsecureOrCredentialedBaseURL() {
+        XCTAssertNil(LiveDirectoryClient(baseURL: URL(string: "http://api.example.org")!))
+        XCTAssertNil(LiveDirectoryClient(baseURL: URL(string: "https://user:pass@api.example.org")!))
+    }
+
+    func testRejectsNonJSONResponses() async throws {
+        let response = HTTPURLResponse(
+            url: URL(string: "https://api.example.org")!,
+            statusCode: 200,
+            httpVersion: nil,
+            headerFields: ["Content-Type": "text/plain"]
+        )!
+        let client = try XCTUnwrap(
+            LiveDirectoryClient(
+                baseURL: URL(string: "https://api.example.org")!,
+                session: StubURLSession(result: .success((Data(), response)))
+            )
+        )
+
+        await XCTAssertThrowsErrorAsync(try await client.fetchSchools()) { error in
+            XCTAssertEqual(error as? DirectoryClientError, .invalidResponse)
+        }
+    }
+}
+
+private struct StubURLSession: URLSessionProtocol {
+    let result: Result<(Data, URLResponse), Error>
+
+    func data(for request: URLRequest) async throws -> (Data, URLResponse) {
+        XCTAssertEqual(request.value(forHTTPHeaderField: "Accept"), "application/json")
+        return try result.get()
+    }
+}
+
+private func XCTAssertThrowsErrorAsync<T>(
+    _ expression: @autoclosure () async throws -> T,
+    file: StaticString = #filePath,
+    line: UInt = #line,
+    _ handler: (Error) -> Void
+) async {
+    do {
+        _ = try await expression()
+        XCTFail("Expected an error", file: file, line: line)
+    } catch {
+        handler(error)
+    }
+}
