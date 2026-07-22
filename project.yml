@@ -13,6 +13,7 @@ settings:
     MARKETING_VERSION: 0.1.0
     GENERATE_INFOPLIST_FILE: YES
     INFOPLIST_KEY_CFBundleDisplayName: HSclubs Guide
+    INFOPLIST_KEY_USE_FIXTURE_DIRECTORY: YES
     INFOPLIST_KEY_DIRECTORY_API_BASE_URL: https://api.guide.example.org
     INFOPLIST_KEY_LSApplicationCategoryType: public.app-category.education
     INFOPLIST_KEY_UIApplicationSceneManifest_Generation: YES
