@@ -58,6 +58,30 @@ final class SchoolClubsViewModel: ObservableObject {
         }
     }
 
+    /// A small, deterministic set of highlighted clubs for the "Featured clubs"
+    /// row, mirroring the highlighted section on hsclubs.net. Clubs with an
+    /// Instagram link are preferred as a lightweight signal of an active club;
+    /// ties fall back to fixture order for stable, testable output.
+    var featuredClubs: [Club] {
+        let maximumFeatured = 5
+        let ordered = allClubs.enumerated().sorted { lhs, rhs in
+            let lhsHasLink = lhs.element.instagramUrl != nil
+            let rhsHasLink = rhs.element.instagramUrl != nil
+            if lhsHasLink != rhsHasLink {
+                return lhsHasLink && !rhsHasLink
+            }
+            return lhs.offset < rhs.offset
+        }
+        return ordered.prefix(maximumFeatured).map(\.element)
+    }
+
+    /// Featured clubs are only relevant on the unfiltered, unsearched directory.
+    var showsFeaturedClubs: Bool {
+        selectedCategory == nil
+            && searchText.trimmingCharacters(in: .whitespacesAndNewlines).isEmpty
+            && featuredClubs.count > 1
+    }
+
     func load() async {
         state = .loading
         do {

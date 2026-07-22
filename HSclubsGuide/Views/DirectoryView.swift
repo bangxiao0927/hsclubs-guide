@@ -42,6 +42,8 @@ struct DirectoryView: View {
     private var schoolList: some View {
         ScrollView {
             LazyVStack(alignment: .leading, spacing: 16) {
+                BrandHeader(caption: "School club discovery")
+
                 VStack(alignment: .leading, spacing: 12) {
                     Text("SCHOOL DISCOVERY, MADE CLEAR")
                         .font(.caption.weight(.bold))

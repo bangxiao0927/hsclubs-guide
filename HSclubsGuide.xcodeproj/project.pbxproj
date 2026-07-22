@@ -14,6 +14,7 @@
 		34392C5DB044F92F2FB9720E /* directory-schools.valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 165150719C69C9F962CBBE02 /* directory-schools.valid.json */; };
 		37FD8E079110171F74DB7D28 /* DirectoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9548C75616AF545139802627 /* DirectoryViewModel.swift */; };
 		48E8ED5AAAAC81627EFE6922 /* HSclubsGuideApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C352AC848A45E4F3986F5774 /* HSclubsGuideApp.swift */; };
+		580DF5E278ABAAAE8F5E1DA5 /* BrandHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BC54F61EBBC287BBDEC5939 /* BrandHeader.swift */; };
 		65BD3F9872EAA0F2802109A9 /* school-clubs.cedar-academy.valid.json in Resources */ = {isa = PBXBuildFile; fileRef = 46F8D49BFA33F14FECAD58E1 /* school-clubs.cedar-academy.valid.json */; };
 		69C32934810EBBFE428B6B91 /* Club.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC1A1ABE8E462A56F517C360 /* Club.swift */; };
 		77C7451EC5E37107E5B84CD5 /* school-clubs.lakeside-secondary.valid.json in Resources */ = {isa = PBXBuildFile; fileRef = D8491B1E042498B39B9CC7D7 /* school-clubs.lakeside-secondary.valid.json */; };
@@ -61,6 +62,7 @@
 
 /* Begin PBXFileReference section */
 		165150719C69C9F962CBBE02 /* directory-schools.valid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "directory-schools.valid.json"; sourceTree = "<group>"; };
+		1BC54F61EBBC287BBDEC5939 /* BrandHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrandHeader.swift; sourceTree = "<group>"; };
 		1CE2CA1F68306F4868704137 /* HSclubsGuideTests.xctest */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.cfbundle; path = HSclubsGuideTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1DA32C380EC748EF38C74A15 /* source-summary.valid.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "source-summary.valid.json"; sourceTree = "<group>"; };
 		21B8EB17C50D5D2A35E8C5BB /* HSclubsGuide.app */ = {isa = PBXFileReference; includeInIndex = 0; lastKnownFileType = wrapper.application; path = HSclubsGuide.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,6 +199,7 @@
 		E7C3FB92AB4D1EA9C121A787 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				1BC54F61EBBC287BBDEC5939 /* BrandHeader.swift */,
 				DFF033455A7AC6A02AFF5329 /* ClubCard.swift */,
 				55B14D4EF024F4214DDAAC3B /* ClubDetailView.swift */,
 				65AA4F27C1BEEB7AE419BA26 /* DirectoryView.swift */,
@@ -356,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9D3DF96CBBCC4A3A9A355EC4 /* AppEnvironment.swift in Sources */,
+				580DF5E278ABAAAE8F5E1DA5 /* BrandHeader.swift in Sources */,
 				69C32934810EBBFE428B6B91 /* Club.swift in Sources */,
 				AA18E6E38FFCD3B4E9148F9D /* ClubCard.swift in Sources */,
 				EF9CA942A362245EE9A7FB4B /* ClubDetailView.swift in Sources */,

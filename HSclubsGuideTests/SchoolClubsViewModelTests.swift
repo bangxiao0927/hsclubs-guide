@@ -50,6 +50,35 @@ final class SchoolClubsViewModelTests: XCTestCase {
         XCTAssertEqual(message, "This school's club directory could not be loaded.")
     }
 
+    func testFeaturedClubsPreferInstagramThenFixtureOrder() async {
+        let clubs = [
+            Club(id: 1, name: "No Link A", category: "STEM", advisor: nil, location: nil,
+                 meetingSchedule: nil, description: "One.", instagramUrl: nil),
+            Club(id: 2, name: "Linked B", category: "STEM", advisor: nil, location: nil,
+                 meetingSchedule: nil, description: "Two.",
+                 instagramUrl: URL(string: "https://instagram.com/b")),
+            Club(id: 3, name: "No Link C", category: "STEM", advisor: nil, location: nil,
+                 meetingSchedule: nil, description: "Three.", instagramUrl: nil),
+        ]
+        let viewModel = makeViewModel(clubs: clubs)
+        await viewModel.load()
+
+        XCTAssertEqual(viewModel.featuredClubs.map(\.name), ["Linked B", "No Link A", "No Link C"])
+        XCTAssertTrue(viewModel.showsFeaturedClubs)
+    }
+
+    func testFeaturedClubsHiddenWhenSearchingOrFiltering() async {
+        let viewModel = makeViewModel(clubs: sampleClubs)
+        await viewModel.load()
+
+        viewModel.searchText = "chess"
+        XCTAssertFalse(viewModel.showsFeaturedClubs)
+
+        viewModel.searchText = ""
+        viewModel.selectedCategory = "Sports"
+        XCTAssertFalse(viewModel.showsFeaturedClubs)
+    }
+
     // MARK: Helpers
 
     private var sampleClubs: [Club] {

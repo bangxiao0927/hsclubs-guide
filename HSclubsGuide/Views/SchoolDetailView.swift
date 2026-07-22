@@ -132,9 +132,60 @@ struct SchoolDetailView: View {
 
     @ViewBuilder
     private var loadedContent: some View {
+        if viewModel.showsFeaturedClubs {
+            featuredSection
+        }
         searchField
         categoryChips
         clubList
+    }
+
+    // MARK: Featured clubs
+
+    private var featuredSection: some View {
+        VStack(alignment: .leading, spacing: 12) {
+            Text("FEATURED CLUBS")
+                .font(.caption.weight(.bold))
+                .tracking(1.2)
+                .foregroundStyle(GuideTheme.primary)
+
+            ScrollView(.horizontal, showsIndicators: false) {
+                HStack(spacing: 12) {
+                    ForEach(viewModel.featuredClubs) { club in
+                        NavigationLink(value: club) {
+                            featuredCard(club)
+                        }
+                        .buttonStyle(.plain)
+                        .accessibilityIdentifier("featured-club-\(club.id)")
+                    }
+                }
+                .padding(.horizontal, 2)
+            }
+        }
+        .frame(maxWidth: .infinity, alignment: .leading)
+    }
+
+    private func featuredCard(_ club: Club) -> some View {
+        VStack(alignment: .leading, spacing: 10) {
+            CategoryBadge(category: club.category)
+            Text(club.name)
+                .font(.headline)
+                .foregroundStyle(GuideTheme.textPrimary)
+                .lineLimit(2)
+            Text(club.description)
+                .font(.footnote)
+                .foregroundStyle(GuideTheme.textMuted)
+                .lineLimit(3)
+            Spacer(minLength: 0)
+        }
+        .frame(width: 240, alignment: .leading)
+        .frame(maxHeight: .infinity, alignment: .top)
+        .padding(16)
+        .background(GuideTheme.cardSurface, in: RoundedRectangle(cornerRadius: 20))
+        .overlay {
+            RoundedRectangle(cornerRadius: 20)
+                .stroke(GuideTheme.border, lineWidth: 1)
+        }
     }
 
     private var searchField: some View {
