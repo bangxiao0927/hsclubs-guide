@@ -8,6 +8,7 @@ final class DiscoveryFlowUITests: XCTestCase {
 
     func testSearchOpensSchoolDetail() throws {
         let app = XCUIApplication()
+        app.launchArguments = ["--use-fixture-directory"]
         app.launch()
 
         XCTAssertTrue(app.staticTexts["Find your school"].waitForExistence(timeout: 5))
