@@ -2,9 +2,10 @@
 
 ## Scope
 
-This milestone replaces the former Vue frontend with a native SwiftUI iPhone app. It
-keeps the same school-discovery boundary and does not connect directly to school-owned
-HSclubs instances.
+This milestone replaces the former Vue frontend with a native SwiftUI iPhone app whose
+layout and visual language mirror the hsclubs.net school club mini-site. It keeps a
+read-only school-and-club discovery boundary and does not connect directly to
+school-owned HSclubs instances.
 
 ## Acceptance Criteria
 
@@ -13,11 +14,21 @@ HSclubs instances.
 - A maintainer can generate the project with XcodeGen and run it in an iPhone Simulator.
 - Strict contract decoding accepts reviewed fixtures and rejects malformed, insecure, or
   undeclared private fields.
-- The app supports fixture-driven school search, cards, details, status, category counts,
-  and canonical outbound links.
+- The app supports fixture-driven school search and, per school, a browsable club
+  directory with a brand header, hero stats, a featured-clubs row, category chips,
+  club search, and read-only club detail pages.
+- Canonical school links and club Instagram links are secondary outbound actions, never
+  the primary experience.
 - Loading, empty search, and safe failure states are accessible with Dynamic Type and
   VoiceOver labels supplied by native controls.
+- The interface adapts to light and dark mode through a shared adaptive theme.
 - XCTest unit and UI tests run in CI without a live endpoint or signing identity.
+
+## Read-Only Discovery Boundary
+
+The app shows schools and their public clubs for discovery only. It must never add club
+management, memberships, applications, shared login, or president/administrator
+workflows. Club records carry no student, member, or contact identity data.
 
 ## Project Layout
 
